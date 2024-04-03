@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
 
   const modalStyle = `
+  #rocket-chat {
+    padding-top: 20px;
+  }
   .pake-modal {
     display: none;
     position: fixed;
