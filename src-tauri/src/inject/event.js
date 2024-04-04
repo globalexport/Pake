@@ -195,6 +195,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const detectAnchorElementClick = (e) => {
     const anchorElement = e.target.closest('a');
     if (anchorElement && anchorElement.href) {
+      console.log('DEBUG: anchorElement.target', anchorElement.target)
       if (anchorElement.target !== '') anchorElement.target = '_self';
       const hrefUrl = new URL(anchorElement.href);
       const absoluteUrl = hrefUrl.href;

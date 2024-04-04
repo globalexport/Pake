@@ -3,50 +3,55 @@ on:
   workflow_dispatch:
     inputs:
       platform:
-        description: 'platform'
+        description: "platform"
         required: true
-        default: 'macos-latest'
+        default: "macos-latest"
         type: choice
         options:
-          - 'windows-latest'
-          - 'macos-latest'
-          - 'ubuntu-20.04'
+          - "windows-latest"
+          - "macos-latest"
+          - "ubuntu-20.04"
       url:
-        description: '[URL]'
+        description: "[URL]"
         required: true
       name:
-        description: '[Name]'
+        description: "[Name]"
         required: true
       icon:
-        description: '[Icon, Optional]'
+        description: "[Icon, Optional]"
         required: false
       width:
-        description: '[Width, Optional]'
+        description: "[Width, Optional]"
         required: false
-        default: '1200'
+        default: "1200"
       height:
-        description: '[Height, Optional]'
+        description: "[Height, Optional]"
         required: false
-        default: '780'
+        default: "780"
       transparent:
-        description: '[Transparent, Optional, MacOS only]'
+        description: "[Transparent, Optional, MacOS only]"
         required: false
         type: boolean
         default: false
       multi_arch:
-        description: '[MultiArch, Optional, MacOS only]'
+        description: "[MultiArch, Optional, MacOS only]"
         required: false
         type: boolean
         default: false
       targets:
-        description: '[Targets, Optional, Linux only]'
+        description: "[Targets, Optional, Linux only]"
         required: false
-        default: 'deb'
+        default: "deb"
         type: choice
         options:
-          - 'deb'
-          - 'appimage'
-          - 'all'
+          - "deb"
+          - "appimage"
+          - "all"
+      tauri_debug:
+        description: "Tauri Debug"
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   build:
@@ -129,6 +134,7 @@ jobs:
           RESIZE: ${{ inputs.resize }}
           MULTI_ARCH: ${{ inputs.multi_arch }}
           TARGETS: ${{ inputs.targets }}
+          TAURI_DEBUG: ${{ inputs.tauri_debug }}
 
       - name: Upload archive
         uses: actions/upload-artifact@v3

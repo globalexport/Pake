@@ -17,6 +17,7 @@ console.log('transparent: ', process.env.TRANSPARENT);
 console.log('resize: ', process.env.RESIZE);
 console.log('is multi arch? only for Mac: ', process.env.MULTI_ARCH);
 console.log('targets type? only for Linux: ', process.env.TARGETS);
+console.log('tauri debug: ', process.env.TAURI_DEBUG);
 console.log('===========================\n');
 
 cd('node_modules/pake-cli');
@@ -49,6 +50,10 @@ if (process.platform === 'linux') {
 
 if (process.platform === 'darwin') {
   params = `${params} --show-menu`;
+}
+
+if (process.env.TAURI_DEBUG) {
+  params = `${params} --debug`;
 }
 
 const downloadIcon = async iconFile => {
