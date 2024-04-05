@@ -23,288 +23,288 @@ var name = "pake-cli";
 var version = "2.3.4";
 var description = "🤱🏻 Turn any webpage into a desktop app with Rust. 🤱🏻 利用 Rust 轻松构建轻量级多端桌面应用。";
 var engines = {
-	node: ">=16.0.0"
+    node: ">=16.0.0"
 };
 var bin = {
-	pake: "./cli.js"
+    pake: "./cli.js"
 };
 var repository = {
-	type: "git",
-	url: "https://github.com/tw93/pake.git"
+    type: "git",
+    url: "https://github.com/tw93/pake.git"
 };
 var author = {
-	name: "Tw93",
-	email: "tw93@qq.com"
+    name: "Tw93",
+    email: "tw93@qq.com"
 };
 var keywords = [
-	"pake",
-	"pake-cli",
-	"rust",
-	"tauri",
-	"no-electron",
-	"productivity"
+    "pake",
+    "pake-cli",
+    "rust",
+    "tauri",
+    "no-electron",
+    "productivity"
 ];
 var files = [
-	"dist",
-	"src-tauri",
-	"cli.js"
+    "dist",
+    "src-tauri",
+    "cli.js"
 ];
 var scripts = {
-	start: "npm run dev",
-	dev: "npm run tauri dev",
-	build: "npm run tauri build --release",
-	"build:debug": "npm run tauri build -- --debug",
-	"build:mac": "npm run tauri build -- --target universal-apple-darwin",
-	"build:config": "chmod +x script/app_config.mjs && node script/app_config.mjs",
-	analyze: "cd src-tauri && cargo bloat --release --crates",
-	tauri: "tauri",
-	cli: "rollup -c rollup.config.js --watch",
-	"cli:dev": "cross-env NODE_ENV=development rollup -c rollup.config.js -w",
-	"cli:build": "cross-env NODE_ENV=production rollup -c rollup.config.js",
-	prepublishOnly: "npm run cli:build"
+    start: "npm run dev",
+    dev: "npm run tauri dev",
+    build: "npm run tauri build --verbose --release",
+    "build:debug": "npm run tauri build -- --verbose --debug",
+    "build:mac": "npm run tauri build -- --target universal-apple-darwin",
+    "build:config": "chmod +x script/app_config.mjs && node script/app_config.mjs",
+    analyze: "cd src-tauri && cargo bloat --release --crates",
+    tauri: "tauri",
+    cli: "rollup -c rollup.config.js --watch",
+    "cli:dev": "cross-env NODE_ENV=development rollup -c rollup.config.js -w",
+    "cli:build": "cross-env NODE_ENV=production rollup -c rollup.config.js",
+    prepublishOnly: "npm run cli:build"
 };
 var type = "module";
 var exports = "./dist/pake.js";
 var license = "MIT";
 var dependencies = {
-	"@tauri-apps/api": "^1.4.0",
-	"@tauri-apps/cli": "^1.4.0",
-	axios: "^1.1.3",
-	chalk: "^5.1.2",
-	commander: "^11.0.0",
-	"file-type": "^18.0.0",
-	"fs-extra": "^11.1.0",
-	"is-url": "^1.2.4",
-	loglevel: "^1.8.1",
-	ora: "^6.1.2",
-	prompts: "^2.4.2",
-	psl: "^1.9.0",
-	shelljs: "^0.8.5",
-	"tmp-promise": "^3.0.3",
-	"update-notifier": "^6.0.2"
+    "@tauri-apps/api": "^1.4.0",
+    "@tauri-apps/cli": "^1.4.0",
+    axios: "^1.1.3",
+    chalk: "^5.1.2",
+    commander: "^11.0.0",
+    "file-type": "^18.0.0",
+    "fs-extra": "^11.1.0",
+    "is-url": "^1.2.4",
+    loglevel: "^1.8.1",
+    ora: "^6.1.2",
+    prompts: "^2.4.2",
+    psl: "^1.9.0",
+    shelljs: "^0.8.5",
+    "tmp-promise": "^3.0.3",
+    "update-notifier": "^6.0.2"
 };
 var devDependencies = {
-	"@rollup/plugin-alias": "^4.0.2",
-	"@rollup/plugin-commonjs": "^23.0.2",
-	"@rollup/plugin-json": "^5.0.2",
-	"@rollup/plugin-replace": "^5.0.2",
-	"@rollup/plugin-terser": "^0.1.0",
-	"@types/fs-extra": "^9.0.13",
-	"@types/is-url": "^1.2.30",
-	"@types/page-icon": "^0.3.4",
-	"@types/prompts": "^2.4.1",
-	"@types/psl": "^1.1.0",
-	"@types/shelljs": "^0.8.11",
-	"@types/tmp": "^0.2.3",
-	"@types/update-notifier": "^6.0.1",
-	"app-root-path": "^3.1.0",
-	"cross-env": "^7.0.3",
-	rollup: "^3.3.0",
-	"rollup-plugin-typescript2": "^0.34.1",
-	tslib: "^2.4.1",
-	typescript: "^4.9.3"
+    "@rollup/plugin-alias": "^4.0.2",
+    "@rollup/plugin-commonjs": "^23.0.2",
+    "@rollup/plugin-json": "^5.0.2",
+    "@rollup/plugin-replace": "^5.0.2",
+    "@rollup/plugin-terser": "^0.1.0",
+    "@types/fs-extra": "^9.0.13",
+    "@types/is-url": "^1.2.30",
+    "@types/page-icon": "^0.3.4",
+    "@types/prompts": "^2.4.1",
+    "@types/psl": "^1.1.0",
+    "@types/shelljs": "^0.8.11",
+    "@types/tmp": "^0.2.3",
+    "@types/update-notifier": "^6.0.1",
+    "app-root-path": "^3.1.0",
+    "cross-env": "^7.0.3",
+    rollup: "^3.3.0",
+    "rollup-plugin-typescript2": "^0.34.1",
+    tslib: "^2.4.1",
+    typescript: "^4.9.3"
 };
 var packageJson = {
-	name: name,
-	version: version,
-	description: description,
-	engines: engines,
-	bin: bin,
-	repository: repository,
-	author: author,
-	keywords: keywords,
-	files: files,
-	scripts: scripts,
-	type: type,
-	exports: exports,
-	license: license,
-	dependencies: dependencies,
-	devDependencies: devDependencies
+    name: name,
+    version: version,
+    description: description,
+    engines: engines,
+    bin: bin,
+    repository: repository,
+    author: author,
+    keywords: keywords,
+    files: files,
+    scripts: scripts,
+    type: type,
+    exports: exports,
+    license: license,
+    dependencies: dependencies,
+    devDependencies: devDependencies
 };
 
 var windows = [
-	{
-		url: "https://weread.qq.com/",
-		transparent: true,
-		fullscreen: false,
-		width: 1200,
-		height: 780,
-		resizable: true,
-		url_type: "web"
-	}
+    {
+        url: "https://weread.qq.com/",
+        transparent: true,
+        fullscreen: false,
+        width: 1200,
+        height: 780,
+        resizable: true,
+        url_type: "web"
+    }
 ];
 var user_agent = {
-	macos: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
-	linux: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
-	windows: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+    macos: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15",
+    linux: "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36",
+    windows: "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
 };
 var menu = {
-	macos: false,
-	linux: false,
-	windows: false
+    macos: false,
+    linux: false,
+    windows: false
 };
 var system_tray = {
-	macos: false,
-	linux: true,
-	windows: true
+    macos: false,
+    linux: true,
+    windows: true
 };
 var inject = [
 ];
 var pakeConf = {
-	windows: windows,
-	user_agent: user_agent,
-	menu: menu,
-	system_tray: system_tray,
-	inject: inject
+    windows: windows,
+    user_agent: user_agent,
+    menu: menu,
+    system_tray: system_tray,
+    inject: inject
 };
 
 var tauri$3 = {
-	security: {
-		csp: null,
-		dangerousRemoteDomainIpcAccess: [
-			{
-				domain: "weread.qq.com",
-				windows: [
-					"pake"
-				],
-				enableTauriAPI: true
-			}
-		]
-	},
-	updater: {
-		active: false
-	},
-	systemTray: {
-		iconPath: "png/icon_512.png",
-		iconAsTemplate: true
-	},
-	allowlist: {
-		all: true,
-		fs: {
-			all: true,
-			scope: [
-				"$DOWNLOAD/*"
-			]
-		}
-	}
+    security: {
+        csp: null,
+        dangerousRemoteDomainIpcAccess: [
+            {
+                domain: "weread.qq.com",
+                windows: [
+                    "pake"
+                ],
+                enableTauriAPI: true
+            }
+        ]
+    },
+    updater: {
+        active: false
+    },
+    systemTray: {
+        iconPath: "png/icon_512.png",
+        iconAsTemplate: true
+    },
+    allowlist: {
+        all: true,
+        fs: {
+            all: true,
+            scope: [
+                "$DOWNLOAD/*"
+            ]
+        }
+    }
 };
 var build = {
-	withGlobalTauri: true,
-	devPath: "../dist",
-	distDir: "../dist",
-	beforeBuildCommand: "",
-	beforeDevCommand: ""
+    withGlobalTauri: true,
+    devPath: "../dist",
+    distDir: "../dist",
+    beforeBuildCommand: "",
+    beforeDevCommand: ""
 };
 var CommonConf = {
-	"package": {
-	productName: "WeRead",
-	version: "1.0.0"
-},
-	tauri: tauri$3,
-	build: build
+    "package": {
+        productName: "WeRead",
+        version: "1.0.0"
+    },
+    tauri: tauri$3,
+    build: build
 };
 
 var tauri$2 = {
-	bundle: {
-		icon: [
-			"png/weread_256.ico",
-			"png/weread_32.ico"
-		],
-		identifier: "com.pake.weread",
-		active: true,
-		category: "DeveloperTool",
-		copyright: "",
-		externalBin: [
-		],
-		longDescription: "",
-		resources: [
-			"png/weread_32.ico"
-		],
-		shortDescription: "",
-		targets: [
-			"msi"
-		],
-		windows: {
-			certificateThumbprint: null,
-			digestAlgorithm: "sha256",
-			timestampUrl: "",
-			wix: {
-				language: [
-					"en-US"
-				],
-				template: "assets/main.wxs"
-			}
-		}
-	}
+    bundle: {
+        icon: [
+            "png/weread_256.ico",
+            "png/weread_32.ico"
+        ],
+        identifier: "com.pake.weread",
+        active: true,
+        category: "DeveloperTool",
+        copyright: "",
+        externalBin: [
+        ],
+        longDescription: "",
+        resources: [
+            "png/weread_32.ico"
+        ],
+        shortDescription: "",
+        targets: [
+            "msi"
+        ],
+        windows: {
+            certificateThumbprint: null,
+            digestAlgorithm: "sha256",
+            timestampUrl: "",
+            wix: {
+                language: [
+                    "en-US"
+                ],
+                template: "assets/main.wxs"
+            }
+        }
+    }
 };
 var WinConf = {
-	tauri: tauri$2
+    tauri: tauri$2
 };
 
 var tauri$1 = {
-	bundle: {
-		icon: [
-			"icons/weread.icns"
-		],
-		identifier: "com.pake.weread",
-		active: true,
-		category: "DeveloperTool",
-		copyright: "",
-		externalBin: [
-		],
-		longDescription: "",
-		macOS: {
-			entitlements: null,
-			exceptionDomain: "",
-			frameworks: [
-			],
-			providerShortName: null,
-			signingIdentity: null
-		},
-		resources: [
-		],
-		shortDescription: "",
-		targets: [
-			"dmg"
-		]
-	}
+    bundle: {
+        icon: [
+            "icons/weread.icns"
+        ],
+        identifier: "com.pake.weread",
+        active: true,
+        category: "DeveloperTool",
+        copyright: "",
+        externalBin: [
+        ],
+        longDescription: "",
+        macOS: {
+            entitlements: null,
+            exceptionDomain: "",
+            frameworks: [
+            ],
+            providerShortName: null,
+            signingIdentity: null
+        },
+        resources: [
+        ],
+        shortDescription: "",
+        targets: [
+            "dmg"
+        ]
+    }
 };
 var MacConf = {
-	tauri: tauri$1
+    tauri: tauri$1
 };
 
 var tauri = {
-	bundle: {
-		icon: [
-			"png/weread_512.png"
-		],
-		identifier: "com.pake.weread",
-		active: true,
-		category: "DeveloperTool",
-		copyright: "",
-		deb: {
-			depends: [
-				"curl",
-				"wget"
-			],
-			files: {
-				"/usr/share/applications/com-pake-weread.desktop": "assets/com-pake-weread.desktop"
-			}
-		},
-		externalBin: [
-		],
-		longDescription: "",
-		resources: [
-		],
-		shortDescription: "",
-		targets: [
-			"deb",
-			"appimage"
-		]
-	}
+    bundle: {
+        icon: [
+            "png/weread_512.png"
+        ],
+        identifier: "com.pake.weread",
+        active: true,
+        category: "DeveloperTool",
+        copyright: "",
+        deb: {
+            depends: [
+                "curl",
+                "wget"
+            ],
+            files: {
+                "/usr/share/applications/com-pake-weread.desktop": "assets/com-pake-weread.desktop"
+            }
+        },
+        externalBin: [
+        ],
+        longDescription: "",
+        resources: [
+        ],
+        shortDescription: "",
+        targets: [
+            "deb",
+            "appimage"
+        ]
+    }
 };
 var LinuxConf = {
-	tauri: tauri
+    tauri: tauri
 };
 
 const platformConfigs = {
@@ -1035,24 +1035,24 @@ program
     .option('--debug', 'Debug mode', DEFAULT_PAKE_OPTIONS.debug)
     .version(packageJson.version, '-v, --version', 'Output the current version')
     .action(async (url, options) => {
-    await checkUpdateTips();
-    if (!url) {
-        program.outputHelp(str => {
-            return str
-                .split('\n')
-                .filter(line => !/((-h,|--help)|((-v|-V),|--version))\s+.+$/.test(line))
-                .join('\n');
-        });
-        process.exit(0);
-    }
-    log.setDefaultLevel('info');
-    if (options.debug) {
-        log.setLevel('debug');
-    }
-    const appOptions = await handleOptions(options, url);
-    log.debug('PakeAppOptions', appOptions);
-    const builder = BuilderProvider.create(appOptions);
-    await builder.prepare();
-    await builder.build(url);
-});
+        await checkUpdateTips();
+        if (!url) {
+            program.outputHelp(str => {
+                return str
+                    .split('\n')
+                    .filter(line => !/((-h,|--help)|((-v|-V),|--version))\s+.+$/.test(line))
+                    .join('\n');
+            });
+            process.exit(0);
+        }
+        log.setDefaultLevel('info');
+        if (options.debug) {
+            log.setLevel('debug');
+        }
+        const appOptions = await handleOptions(options, url);
+        log.debug('PakeAppOptions', appOptions);
+        const builder = BuilderProvider.create(appOptions);
+        await builder.prepare();
+        await builder.build(url);
+    });
 program.parse();
